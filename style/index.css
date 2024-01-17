@@ -94,11 +94,10 @@ header > .menu-con {
 nav {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 101%;
   left: 0%;
   width: 100%;
   background-color: white;
-  border-top: solid 1px #eee;
 }
 
 nav > .width15 {
@@ -203,6 +202,10 @@ footer > .footer-con {
   align-items: end;
 }
 
+footer > .footer-con > .box1 {
+  line-height: 120%;
+}
+
 footer > .footer-con > .box1 > img {
   width: 210px;
   margin-bottom: 1%;
@@ -210,14 +213,12 @@ footer > .footer-con > .box1 > img {
 
 footer > .footer-con > .box1 > p {
   font-size: 14px;
-  font-weight: 400;
   color: #fff;
   opacity: 0.5;
 }
 
 footer > .footer-con > .box2 > p {
   font-size: 14px;
-  font-weight: 400;
   color: #fff;
   opacity: 0.25;
 }
@@ -282,7 +283,7 @@ footer > .footer-con > .box2 > p {
     height: 99vh;
     border: none;
     overflow-y: scroll;
-    padding-bottom: 100px;
+    padding-bottom: 170px;
   }
 
   header > .menu-con > .menu-box > .title-box {
@@ -300,7 +301,7 @@ footer > .footer-con > .box2 > p {
 
   header > .menu-con > .menu-box > .title-box > img {
     display: block;
-    width: 25px;
+    width: 20px;
   }
 
   header > .right-box {

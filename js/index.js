@@ -50,6 +50,7 @@ $(document).ready(() => {
       ? "https://zsecq94.github.io/renewal/assets/images/logo/logo_color.png"
       : "https://zsecq94.github.io/renewal/assets/images/logo/logo_black.png";
     const headerRightHr = state ? { color: "black", opacity: 0.1 } : { color: "#fff", opacity: 0.1 };
+    const headerBorderBottom = state ? "solid 1px #eee" : "none";
     const headerRightLangSrc = state
       ? "https://zsecq94.github.io/renewal/assets/images/icon/lang_icon2.png"
       : "https://zsecq94.github.io/renewal/assets/images/icon/lang_icon.png";
@@ -81,6 +82,7 @@ $(document).ready(() => {
     }
 
     $header.css("backgroundColor", headerBgColor);
+    $header.css("borderBottom", headerBorderBottom);
     $logo.attr("src", headerLogoSrc);
     $menu.css("color", headerMenu);
     $hr.css(headerRightHr);

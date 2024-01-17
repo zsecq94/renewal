@@ -236,6 +236,7 @@ $(document).ready(() => {
     //지도를 생성할 때 필요한 기본 옵션
     center: new kakao.maps.LatLng(35.019686319905965, 126.7800942636125), //지도의 중심좌표.
     level: 5,
+    draggable: $(window).width() < 750 ? false : true,
   };
 
   var map = new kakao.maps.Map(container, options);
@@ -255,6 +256,7 @@ $(document).ready(() => {
   var options2 = {
     center: new kakao.maps.LatLng(37.909321215454796, 126.7800942636125),
     level: 8,
+    draggable: $(window).width() < 750 ? false : true,
   };
 
   var map2 = new kakao.maps.Map(container2, options2);

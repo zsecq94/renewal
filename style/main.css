@@ -433,10 +433,11 @@
   flex-direction: column;
   gap: 20px;
   padding: 30px 20px;
+  line-height: 140%;
 }
 
 .content4-con > .hidden > .card-con > .card > .text-box > .title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -514,10 +515,16 @@
 }
 
 .content5-con > .map-box {
+  z-index: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 50%;
+}
+
+.content5-con > .map-box > div {
+  width: 100%;
+  height: 360px;
 }
 
 /* //////// */
@@ -596,7 +603,7 @@
 
 .content7-con > button {
   padding: 15px 20px;
-  border-radius: 25px;
+  border-radius: 35px;
   background-color: #f26933;
   display: flex;
   align-items: center;
@@ -954,6 +961,10 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+  }
+
+  .content5-con > .map-box > div {
+    height: 250px;
   }
 
   /* //////// */
