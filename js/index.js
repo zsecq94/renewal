@@ -112,7 +112,7 @@ $(document).ready(() => {
   $menu.hover(
     function () {
       if (!isMobile) {
-        $(this).css("color", "orange");
+        $(this).css("color", "#F26933");
       }
     },
     function () {

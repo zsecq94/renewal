@@ -203,7 +203,7 @@
   padding: 10%;
   display: flex;
   flex-direction: column;
-  gap: 1vh;
+  gap: 20px;
 }
 .content1-con > .hidden > .card-con > .card > .text-box > .title {
   font-size: 20px;
@@ -213,6 +213,7 @@
   color: #666;
   font-size: 14px;
   font-weight: 500;
+  line-height: 140%;
 }
 .content1-con > .hidden > .card-con > .card > .text-box > .more-box {
   display: flex;
@@ -736,13 +737,13 @@
   }
 
   .content1-con > .hidden > .card-con {
-    width: 540%;
+    width: 480%;
     gap: 0.5%;
     margin-left: 20px;
   }
 
   .content1-con > .hidden > .card-con > .card {
-    width: 90%;
+    width: 80%;
   }
 
   .content1-con > .hidden > .card-con > .card > .text-box {
@@ -794,14 +795,16 @@
 
   .content2-con > .hidden > .bot-btn > .circle {
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: solid 1px white;
-    border-radius: 15px;
+    border-radius: 12px;
   }
 
   .content2-con > .hidden > .card-con > .card {
     padding: 30px 20px 70px;
+    background-color: #202936;
+    color: white;
   }
 
   .content2-con > .hidden > .card-con > .card > img {
@@ -866,13 +869,13 @@
   }
 
   .content4-con > .hidden > .card-con {
-    width: 540%;
+    width: 480%;
     gap: 0.5%;
     margin-left: 20px;
   }
 
   .content4-con > .hidden > .card-con > .card {
-    width: 90%;
+    width: 80%;
   }
 
   .content4-con > .hidden > .card-con > .card > .text-box {

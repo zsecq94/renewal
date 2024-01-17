@@ -62,7 +62,7 @@ $(document).ready(() => {
       $nextBtn: $(".content1-con > .title-box > .nav-box > .next"),
       $contentCon: $(".content1-con > .hidden > .card-con"),
       translate: -16.7,
-      translate2: 16.7,
+      translate2: 16.9,
       translateXs: 0,
       translateIdx: 1,
 
@@ -90,7 +90,7 @@ $(document).ready(() => {
       $nextBtn: $(".content4-con > .title-box > .nav-box > .next"),
       $contentCon: $(".content4-con > .hidden > .card-con"),
       translate: -16.7,
-      translate2: 16.7,
+      translate2: 16.9,
       translateXs: 0,
       translateIdx: 1,
       length: 5,
@@ -179,7 +179,7 @@ $(document).ready(() => {
       endPoint = e.changedTouches[0].pageX;
 
       if (content.translateIdx >= 1 && content.translateIdx <= content.length && startPoint > endPoint) {
-        let navCheck = startPoint - endPoint > 200;
+        let navCheck = startPoint - endPoint > 50;
         if (navCheck) {
           content.translateXs = content.translate * content.translateIdx;
           content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
@@ -192,7 +192,7 @@ $(document).ready(() => {
           content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
         }
       } else if (content.translateIdx >= 2 && content.translateIdx <= content.length + 1 && startPoint < endPoint) {
-        let navCheck = endPoint - startPoint > 200;
+        let navCheck = endPoint - startPoint > 50;
         if (navCheck) {
           content.translateXs = content.translate * (content.translateIdx - 2);
           content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
@@ -220,11 +220,11 @@ $(document).ready(() => {
     let idx = contents[1].translateIdx;
     $circle
       .css({
-        border: "solid 1px black",
+        border: "solid 1px #fff",
       })
       .each(function (index) {
         $(this).css({
-          backgroundColor: idx === index + 1 ? "black" : "",
+          backgroundColor: idx === index + 1 ? "#fff" : "",
         });
       });
   };
