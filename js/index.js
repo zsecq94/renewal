@@ -2,7 +2,6 @@ $(document).ready(() => {
   const $header = $("header");
   const $logo = $("header > a > img");
   const $menu = $("header > .menu-con > .menu-box > .title-box > a");
-  const $menuSpan = $("header > .menu-con > .menu-box > .title-box > a > span");
   const $hr = $(".hr");
   const $kr = $(".kr");
   const $en = $(".en");
@@ -47,15 +46,19 @@ $(document).ready(() => {
   };
 
   const updateHeaderStyle = (state, active) => {
-    const headerLogoSrc = state ? "./images/logo/logo_color.png" : "./images/logo/logo_black.png";
+    const headerLogoSrc = state
+      ? "https://zsecq94.github.io/renewal/assets/images/logo/logo_color.png"
+      : "https://zsecq94.github.io/renewal/assets/images/logo/logo_black.png";
     const headerRightHr = state ? { color: "black", opacity: 0.1 } : { color: "#fff", opacity: 0.1 };
-    const headerRightLangSrc = state ? "./images/icon/lang_icon2.png" : "./images/icon/lang_icon.png";
+    const headerRightLangSrc = state
+      ? "https://zsecq94.github.io/renewal/assets/images/icon/lang_icon2.png"
+      : "https://zsecq94.github.io/renewal/assets/images/icon/lang_icon.png";
     const headerRightBorder = state ? "solid 1px rgba(0, 0, 0, 0.2)" : "solid 1px white";
     const headerMenuIconSrc = active
-      ? "./images/icon/close_icon.png"
+      ? "https://zsecq94.github.io/renewal/assets/images/icon/close_icon.png"
       : state
-      ? "./images/icon/menu_black.png"
-      : "./images/icon/menu_color.png";
+      ? "https://zsecq94.github.io/renewal/assets/images/icon/menu_black.png"
+      : "https://zsecq94.github.io/renewal/assets/images/icon/menu_color.png";
     let headerMenu;
     let headerBgColor;
     let mbHeaderRightSpan = state ? "black" : "white";
@@ -198,7 +201,7 @@ $(document).ready(() => {
       });
 
       if (!$(this).parent(".menu-box").has(".sub-menu-box").length) {
-        $(this).find("img").attr("src", "./images/icon/up_icon.png");
+        $(this).find("img").attr("src", "https://zsecq94.github.io/renewal/assets/images/icon/up_icon.png");
 
         // 서브 메뉴를 숨긴 상태에서 추가하고
         selectedSubMenu.hide();
@@ -208,7 +211,7 @@ $(document).ready(() => {
         selectedSubMenu.slideDown();
       } else {
         // 서브 메뉴가 이미 존재한다면 슬라이드 업 효과를 적용하여 제거
-        $(this).find("img").attr("src", "./images/icon/down_icon.png");
+        $(this).find("img").attr("src", "https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png");
         $(this)
           .parent(".menu-box")
           .find(".sub-menu-box")

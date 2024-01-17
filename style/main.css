@@ -1,22 +1,22 @@
 .bg1 {
   display: block;
-  background-image: url("../images/bg/bg1.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/bg1.png");
 }
 .bg2 {
   display: none;
-  background-image: url("../images/bg/bg2.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/bg2.png");
 }
 .bg3 {
   display: none;
-  background-image: url("../images/bg/bg3.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/bg3.png");
 }
 .bg4 {
   display: none;
-  background-image: url("../images/bg/bg4.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/bg4.png");
 }
 .bg5 {
   display: none;
-  background-image: url("../images/bg/bg5.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/bg5.png");
 }
 
 .slide-con {
@@ -352,7 +352,7 @@
 /* //////// */
 
 .cont4-bg {
-  background-image: url("../images/bg/content4_bg.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content4_bg.png");
   background-size: 100% 100%;
   background-position: top;
   display: flex;
@@ -449,7 +449,7 @@
 /* content5 */
 /* //////// */
 .cont5-bg {
-  background-image: url("../images/bg/content5_bg.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content5_bg.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -559,7 +559,7 @@
 /* content7 */
 /* //////// */
 .cont7-bg {
-  background-image: url("../images/bg/content7_bg.png");
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content7_bg.png");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -628,23 +628,23 @@
 @media screen and (max-width: 767px) {
   .bg1 {
     display: block;
-    background-image: url("../images/bg/mb_bg1.png");
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/mb_bg1.png");
   }
   .bg2 {
     display: none;
-    background-image: url("../images/bg/mb_bg2.png");
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/mb_bg2.png");
   }
   .bg3 {
     display: none;
-    background-image: url("../images/bg/mb_bg3.png");
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/mb_bg3.png");
   }
   .bg4 {
     display: none;
-    background-image: url("../images/bg/mb_bg4.png");
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/mb_bg4.png");
   }
   .bg5 {
     display: none;
-    background-image: url("../images/bg/mb_bg5.png");
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/mb_bg5.png");
   }
 
   .slide-con > .slides > .slide > .text-box {
