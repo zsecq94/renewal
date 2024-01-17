@@ -235,39 +235,39 @@ $(document).ready(() => {
   var options = {
     //지도를 생성할 때 필요한 기본 옵션
     center: new kakao.maps.LatLng(35.019686319905965, 126.7800942636125), //지도의 중심좌표.
-    level: 4,
+    level: 5,
   };
 
   var map = new kakao.maps.Map(container, options);
 
-  var markerPosition = new kakao.maps.LatLng(35.019686319905965, 126.7800942636125);
+  // var markerPosition = new kakao.maps.LatLng(35.019686319905965, 126.7800942636125);
 
   // 마커를 생성합니다
-  var marker = new kakao.maps.Marker({
-    position: markerPosition,
-    map: map,
-  });
+  // var marker = new kakao.maps.Marker({
+  //   position: markerPosition,
+  //   map: map,
+  // });
 
   // 마커가 지도 위에 표시되도록 설정합니다
-  marker.setMap(map);
+  // marker.setMap(map);
 
   var container2 = document.getElementById("map2");
   var options2 = {
     center: new kakao.maps.LatLng(37.909321215454796, 126.7800942636125),
-    level: 4,
+    level: 8,
   };
 
   var map2 = new kakao.maps.Map(container2, options2);
 
-  var markerPosition2 = new kakao.maps.LatLng(37.909321215454796, 126.83752088233827);
+  // var markerPosition2 = new kakao.maps.LatLng(37.909321215454796, 126.83752088233827);
 
-  var marker2 = new kakao.maps.Marker({
-    position: markerPosition2,
-  });
+  // var marker2 = new kakao.maps.Marker({
+  //   position: markerPosition2,
+  // });
 
-  marker2.setMap(map2);
+  // marker2.setMap(map2);
 
   map.relayout(); // 맵을 리레이아웃( 다시불러오기)
-  map.setCenter(new daum.maps.LatLng(35.019686319905965, 126.7800942636125));
-  map2.setCenter(new daum.maps.LatLng(37.909321215454796, 126.83752088233827));
+  map.setCenter(new kakao.maps.LatLng(35.019686319905965, 126.7800942636125));
+  map2.setCenter(new kakao.maps.LatLng(37.909321215454796, 126.83752088233827));
 });
