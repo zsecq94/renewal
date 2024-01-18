@@ -15,166 +15,25 @@
     ></script>
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./style/index.css" type="text/css" />
-    <link rel="stylesheet" href="./style/main.css" type="text/css" />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
 
     <!-- javascript -->
-    <script type="text/javascript" src="./js/index.js"></script>
 
     <!-- router -->
     <script src="./router/router.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#header").load("./layout/header.html");
+        $("#footer").load("./layout/footer.html");
+      });
+    </script>
   </head>
 
   <body>
-    <header>
-      <a href="">
-        <img src="https://zsecq94.github.io/renewal/assets/images/logo/logo_black.png" alt="Logo" />
-      </a>
-      <div class="menu-con">
-        <div class="menu-box">
-          <div class="title-box box-width1">
-            <a href="#/about">회사소개</a>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png" alt="Down" />
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="title-box box-width2">
-            <a href="#/renewable">비즈니스 분야</a>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png" alt="Down" />
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="title-box box-width3">
-            <a href="#/tech">보유기술</a>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png" alt="Down" />
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="title-box box-width4">
-            <a href="#/notice">IR</a>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png" alt="Down" />
-          </div>
-        </div>
-        <div class="menu-box">
-          <div class="title-box box-width5">
-            <a href="#/news">PR</a>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png" alt="Down" />
-          </div>
-        </div>
-      </div>
-      <div class="right-box">
-        <div class="lang-box">
-          <span class="kr">KR</span>
-          <span class="hr">|</span>
-          <span class="en">EN</span>
-          <span class="mb-lang-span"></span>
-          <img src="https://zsecq94.github.io/renewal/assets/images/icon/lang_icon.png" alt="Lang" />
-        </div>
-        <img src="https://zsecq94.github.io/renewal/assets/images/icon/menu_color.png" alt="Menu" />
-      </div>
-      <nav>
-        <div class="width15"></div>
-        <div class="sub-menu-con">
-          <div class="sub-menu-box box-width1">
-            <a href="#">인사말</a>
-            <a href="#">연혁</a>
-            <a href="#">인증내역</a>
-            <a href="#">수상내역</a>
-            <a href="#">MEMBER</a>
-            <a href="#">찾아오시는 방법</a>
-          </div>
-          <div class="sub-menu-box box-width2">
-            <a href="#">재생에너지 발전</a>
-            <a href="#">VPP <span>(가상발전소)</span></a>
-            <a href="#">ESS <span>(에너지저장시스템)</span></a>
-            <a href="#">Power to Vehicle <span>(P2V)</span></a>
-            <a href="#">DR <span>(Demand Response)</span></a>
-            <a href="#">Fintech</a>
-          </div>
-          <div class="sub-menu-box box-width3">
-            <a href="#">AI 빅데이터센터</a>
-            <a href="#">기술 특허 현황</a>
-            <a href="#">기업부설연구소 R&D실적</a>
-            <a href="#">시험성적</a>
-          </div>
-          <div class="sub-menu-box box-width4">
-            <a href="#">공지사항</a>
-            <a href="#">기업정보(IR)</a>
-            <a href="#">투자하기</a>
-          </div>
-          <div class="sub-menu-box box-width5">
-            <a href="#">NEWS</a>
-            <a href="#">인사이트</a>
-            <a href="#">시장동향</a>
-            <a href="#">문의사항</a>
-            <a href="#">자료실</a>
-            <a href="#">인재채용</a>
-          </div>
-        </div>
-        <div class="width15"></div>
-      </nav>
-    </header>
+    <div id="header"></div>
 
-    <div class="app"></div>
+    <div id="app"></div>
 
-    <footer>
-      <div class="footer1">
-        <div class="con">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper card-con">
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-              <div class="swiper-slide card">
-                <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer2">
-        <div class="con">
-          <div class="text-box">
-            <span class="title">지금 렉스이노베이션에게 문의하세요!</span>
-            <span class="sub">다양한 분야의 비즈니스 경험이 풍부한 전문가의 도움을 받아보세요</span>
-          </div>
-          <div class="btn-box">
-            <span>문의하기</span>
-            <img src="https://zsecq94.github.io/renewal/assets/images/icon/submit_icon.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="footer3">
-        <div class="con">
-          <div class="box1">
-            <img src="https://zsecq94.github.io/renewal/assets/images/logo/logo2.png" alt="" />
-            <p>대표자 : 임정민 사업자등록번호 :142-81-86179 <br />TEL : 061-820-7533 FAX : 070-8230-7533</p>
-            <p>
-              주소 : 전남 나주시 교육길 13 스마트파크지식산업센터 G동<br />
-              208호(본점), 202호(기업부설연구소), 201호(공장)
-            </p>
-            <p>물류창고 : 경기도 파주시 파평면 파평산로 498-170</p>
-          </div>
-          <div class="box2">
-            <p>Copyright ⓒ 2023 렉스이노베이션 All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
   </body>
 </html>

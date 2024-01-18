@@ -1,0 +1,285 @@
+<script>
+  $(document).ready(() => {
+    let isWeb = window.innerWidth > 767;
+    var footerSwiper = new Swiper(".footer1 > .con > .mySwiper", {
+      slidesPerView: window.innerWidth > 767 ? 5 : 2,
+      spaceBetween: 30,
+    });
+    $(window).resize(() => {
+      let checkWidth = window.innerWidth > 767;
+      if (isWeb !== checkWidth) {
+        isWeb = checkWidth;
+        footerSwiper.params.slidesPerView = isWeb ? 5 : 2;
+        footerSwiper.update();
+      }
+    });
+  });
+</script>
+
+<footer>
+  <div class="footer1">
+    <div class="con">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper card-con">
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+          <div class="swiper-slide card">
+            <img src="https://zsecq94.github.io/renewal/assets/images/content/6_1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer2">
+    <div class="con">
+      <div class="text-box">
+        <span class="title">지금 렉스이노베이션에게 문의하세요!</span>
+        <span class="sub">다양한 분야의 비즈니스 경험이 풍부한 전문가의 도움을 받아보세요</span>
+      </div>
+      <div class="btn-box">
+        <span>문의하기</span>
+        <img src="https://zsecq94.github.io/renewal/assets/images/icon/submit_icon.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="footer3">
+    <div class="con">
+      <div class="box1">
+        <img src="https://zsecq94.github.io/renewal/assets/images/logo/logo2.png" alt="" />
+        <p>대표자 : 임정민 사업자등록번호 :142-81-86179 <br />TEL : 061-820-7533 FAX : 070-8230-7533</p>
+        <p>
+          주소 : 전남 나주시 교육길 13 스마트파크지식산업센터 G동<br />
+          208호(본점), 202호(기업부설연구소), 201호(공장)
+        </p>
+        <p>물류창고 : 경기도 파주시 파평면 파평산로 498-170</p>
+      </div>
+      <div class="box2">
+        <p>Copyright ⓒ 2023 렉스이노베이션 All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 1280px;
+  }
+
+  footer > .footer1 {
+    width: 100%;
+    background-color: #f7f7f8;
+    display: flex;
+    justify-content: center;
+    padding: 54px 0px;
+  }
+
+  footer > .footer1 > .con {
+    width: 1280px;
+  }
+
+  footer > .footer1 > .con > .swiper > .card-con > .card > img {
+    width: 100%;
+  }
+
+  footer > .footer2 {
+    width: 100%;
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content7_bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer > .footer2 > .con {
+    width: 1280px;
+    padding: 160px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 68px;
+  }
+
+  footer > .footer2 > .con > .text-box {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer > .footer2 > .con > .text-box > .title {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  footer > .footer2 > .con > .text-box > .sub {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  footer > .footer2 > .con > .btn-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #f26933;
+    cursor: pointer;
+  }
+
+  footer > .footer2 > .con > .btn-box > span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  footer > .footer2 > .con > .btn-box > img {
+    width: 18px;
+    height: 12px;
+  }
+
+  footer > .footer3 {
+    width: 100%;
+    padding: 40px 0px;
+    background-color: #191b1e;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer > .footer3 > .con {
+    width: 1280px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  footer > .footer3 > .con > .box1 {
+    line-height: 120%;
+  }
+
+  footer > .footer3 > .con > .box1 > p > br {
+    display: none;
+  }
+
+  footer > .footer3 > .con > .box1 > img {
+    width: 210px;
+    margin-bottom: 1%;
+  }
+
+  footer > .footer3 > .con > .box1 > p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  footer > .footer3 > .con > .box2 > p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.25;
+  }
+  @media screen and (max-width: 767px) {
+    footer {
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+
+    footer > .footer1 {
+      padding: 20px;
+    }
+
+    footer > .footer1 > .con {
+      width: 100%;
+    }
+
+    footer > .footer2 {
+      width: 100%;
+      background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content7_bg.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer > .footer2 > .con {
+      width: 100%;
+      padding: 70px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    footer > .footer2 > .con > .text-box {
+      text-align: center;
+    }
+
+    footer > .footer2 > .con > .text-box > .title {
+      font-size: 30px;
+    }
+
+    footer > .footer2 > .con > .text-box > .sub {
+      font-size: 20px;
+    }
+
+    footer > .footer3 > .con {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 0px 24px;
+    }
+
+    footer > .footer3 > .con > .box1 {
+      line-height: 120%;
+
+      margin-bottom: 20px;
+    }
+
+    footer > .footer3 > .con > .box1 > img {
+      width: 210px;
+      margin-bottom: 20px;
+    }
+
+    footer > .footer3 > .con > .box1 > p {
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    footer > .footer3 > .con > .box1 > p > br {
+      display: block;
+    }
+
+    footer > .footer3 > .con > .box2 > p {
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.25;
+    }
+  }
+</style>
