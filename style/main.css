@@ -126,7 +126,6 @@
 /* //////// */
 /* content1 */
 /* //////// */
-
 .content1-con {
   display: flex;
   flex-direction: column;
@@ -166,67 +165,62 @@
   opacity: 0.5;
 }
 
-.content1-con > .hidden {
-  width: 100%;
-  overflow: hidden;
-}
-
-.content1-con > .hidden > .card-con {
-  width: 150%;
-  gap: 2%;
+.content1-con > .swiper {
   display: flex;
-  transition: 0.5s;
+  width: 100%;
+  height: 100%;
 }
 
-.content1-con > .hidden > .card-con > .card {
+.content1-con > .swiper > .card-con > .card {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  width: 25%;
   border: 1px solid #ebebeb;
   justify-content: space-between;
+  width: 100px;
+  height: auto;
 }
 
-.content1-con > .hidden > .card-con > .card > .img-box {
+.content1-con > .swiper > .card-con > .card > .img-box {
   display: flex;
   align-items: center;
   justify-content: end;
 }
 
-.content1-con > .hidden > .card-con > .card > .img-box > img {
+.content1-con > .swiper > .card-con > .card > .img-box > img {
   width: 235px;
   height: 165px;
   border-radius: 7px;
 }
 
-.content1-con > .hidden > .card-con > .card > .text-box {
-  padding: 10%;
+.content1-con > .swiper > .card-con > .card > .text-box {
+  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.content1-con > .hidden > .card-con > .card > .text-box > .title {
+.content1-con > .swiper > .card-con > .card > .text-box > .title {
   font-size: 20px;
   font-weight: 600;
 }
-.content1-con > .hidden > .card-con > .card > .text-box > .sub {
+.content1-con > .swiper > .card-con > .card > .text-box > .sub {
   color: #666;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
 }
-.content1-con > .hidden > .card-con > .card > .text-box > .more-box {
+.content1-con > .swiper > .card-con > .card > .text-box > .more-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.content1-con > .hidden > .card-con > .card > .text-box > .more-box span {
+.content1-con > .swiper > .card-con > .card > .text-box > .more-box span {
   color: #999;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
 }
-.content1-con > .hidden > .card-con > .card > .text-box > .more-box img {
+.content1-con > .swiper > .card-con > .card > .text-box > .more-box img {
   width: 15px;
   height: 12px;
   cursor: pointer;
@@ -274,60 +268,60 @@
   cursor: pointer;
 }
 
-.content2-con > .hidden {
+.content2-con > .swiper {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
 }
 
-.content2-con > .hidden > .card-con {
-  width: 170%;
-  gap: 2%;
-  display: flex;
-  transition: 0.5s;
-}
-
-.content2-con > .hidden > .card-con > .bot-btn {
+.content2-con > .swiper > .swiper-pagination {
   display: none;
 }
 
-.content2-con > .hidden > .card-con > .card {
+.content2-con > .swiper > .card-con {
+  width: 100%;
   display: flex;
+}
+
+.content2-con > .swiper > .card-con > .bot-btn {
+  display: none;
+}
+
+.content2-con > .swiper > .card-con > .card {
+  display: flex;
+  height: auto;
   flex-direction: column;
-  width: 34%;
   justify-content: space-between;
   padding: 60px 50px;
   background-color: #f7f7f8;
-  width: 100%;
-  transition: 0.2s;
 }
-.content2-con > .hidden > .bot-btn > .circle {
+
+.content2-con > .swiper > .bot-btn > .circle {
   display: none;
 }
 
-.content2-con > .hidden > .card-con > .card > img {
+.content2-con > .swiper > .card-con > .card > img {
   width: 100%;
-  height: 50%;
 }
 
-.content2-con > .hidden > .card-con > .card > .text-box {
+.content2-con > .swiper > .card-con > .card > .text-box {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 30px;
 }
 
-.content2-con > .hidden > .card-con > .card > .text-box > .category {
+.content2-con > .swiper > .card-con > .card > .text-box > .category {
   font-size: 18px;
   font-weight: 700;
   color: #f26933;
 }
 
-.content2-con > .hidden > .card-con > .card > .text-box > .title {
+.content2-con > .swiper > .card-con > .card > .text-box > .title {
   font-size: 34px;
   font-weight: 600;
 }
 
-.content2-con > .hidden > .card-con > .card > .text-box > .sub {
+.content2-con > .swiper > .card-con > .card > .text-box > .sub {
   font-size: 14px;
   font-weight: 500;
   color: #999;
@@ -401,34 +395,31 @@
   cursor: pointer;
 }
 
-.content4-con > .hidden {
+.content4-con > .swiper {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
 }
 
-.content4-con > .hidden > .card-con {
-  width: 150%;
-  gap: 2%;
+.content4-con > .swiper > .card-con {
+  width: 100%;
   display: flex;
-  transition: 0.5s;
-  padding-bottom: 30px;
-  padding-left: 5px;
 }
 
-.content4-con > .hidden > .card-con > .card {
+.content4-con > .swiper > .card-con > .card {
   display: flex;
   flex-direction: column;
-  width: 25%;
   background: #fff;
   box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.05);
   word-break: break-all;
 }
 
-.content4-con > .hidden > .card-con > .card > img {
+.content4-con > .swiper > .card-con > .card > img {
   width: 100%;
 }
 
-.content4-con > .hidden > .card-con > .card > .text-box {
+.content4-con > .swiper > .card-con > .card > .text-box {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -436,12 +427,12 @@
   line-height: 140%;
 }
 
-.content4-con > .hidden > .card-con > .card > .text-box > .title {
+.content4-con > .swiper > .card-con > .card > .text-box > .title {
   font-size: 15px;
   font-weight: 700;
 }
 
-.content4-con > .hidden > .card-con > .card > .text-box > .sub {
+.content4-con > .swiper > .card-con > .card > .text-box > .sub {
   color: #666;
   font-size: 14px;
   font-weight: 500;
@@ -624,7 +615,7 @@
 /* /////////////////////////////////////////////////////////// */
 
 @media screen and (min-width: 768px) {
-  .content2-con > .hidden > .card-con > .card:hover {
+  .content2-con > .swiper > .card-con > .card:hover {
     background-color: #202936;
     color: white;
   }
@@ -728,13 +719,13 @@
 
   .content1-con {
     gap: 20px;
-    padding: 30px 0px 15px;
+    padding: 30px 0px;
     width: 100%;
     margin-bottom: 0px;
   }
 
   .content1-con > .title-box > .title {
-    padding: 0px 20px;
+    padding: 0px 15px;
     font-size: 20px;
     width: 80%;
   }
@@ -743,27 +734,24 @@
     display: none;
   }
 
-  .content1-con > .hidden > .card-con {
-    width: 480%;
-    gap: 0.5%;
-    margin-left: 20px;
+  .content1-con > .swiper {
+    box-sizing: border-box;
+    padding: 0px 50px 0px 15px;
   }
 
-  .content1-con > .hidden > .card-con > .card {
-    width: 80%;
-  }
-
-  .content1-con > .hidden > .card-con > .card > .text-box {
+  .content1-con > .swiper > .card-con > .card > .text-box {
     padding: 20px;
   }
-  .content1-con > .hidden > .card-con > .card > .text-box > .title {
+
+  .content1-con > .swiper > .card-con > .card > .text-box > .title {
     font-size: 18px;
   }
-  .content1-con > .hidden > .card-con > .card > .text-box > .sub {
+
+  .content1-con > .swiper > .card-con > .card > .text-box > .sub {
     font-size: 14px;
   }
 
-  .content1-con > .hidden > .card-con > .card > .text-box > .more-box span {
+  .content1-con > .swiper > .card-con > .card > .text-box > .more-box span {
     font-size: 14px;
   }
 
@@ -780,54 +768,47 @@
     display: none;
   }
 
-  .content2-con > .hidden > .card-con {
-    width: 500%;
-    gap: 0%;
+  .content2-con > .swiper {
   }
-
-  .content2-con > .hidden {
-    position: relative;
-  }
-
-  .content2-con > .hidden > .bot-btn {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    transition: 0.5s;
-  }
-
-  .content2-con > .hidden > .bot-btn > .circle {
+  .content2-con > .swiper > .swiper-pagination {
     display: block;
-    width: 12px;
-    height: 12px;
-    border: solid 1px white;
-    border-radius: 12px;
   }
 
-  .content2-con > .hidden > .card-con > .card {
-    padding: 30px 20px 70px;
+  .content2-con > .swiper > .swiper-pagination > .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 12px;
+    opacity: 1;
+    border: solid 1px white;
+  }
+
+  .content2-con > .swiper > .swiper-pagination > .swiper-pagination-bullet-active {
+    background: #fff;
+  }
+
+  .content2-con > .swiper > .card-con > .card {
+    padding: 30px 20px;
     background-color: #202936;
     color: white;
   }
 
-  .content2-con > .hidden > .card-con > .card > img {
+  .content2-con > .swiper > .card-con > .card > img {
     width: 100%;
     height: 100%;
+    padding-bottom: 20px;
   }
 
-  .content2-con > .hidden > .card-con > .card > .text-box > .category {
+  .content2-con > .swiper > .card-con > .card > .text-box > .category {
     font-size: 20px;
   }
 
-  .content2-con > .hidden > .card-con > .card > .text-box > .title {
+  .content2-con > .swiper > .card-con > .card > .text-box > .title {
     font-size: 30px;
   }
 
-  .content2-con > .hidden > .card-con > .card > .text-box > .sub {
+  .content2-con > .swiper > .card-con > .card > .text-box > .sub {
     font-size: 14px;
   }
 
@@ -875,23 +856,18 @@
     display: none;
   }
 
-  .content4-con > .hidden > .card-con {
-    width: 480%;
-    gap: 0.5%;
-    margin-left: 20px;
+  .content4-con > .swiper {
+    box-sizing: border-box;
+    padding: 10px 50px 10px 20px;
   }
 
-  .content4-con > .hidden > .card-con > .card {
-    width: 80%;
-  }
-
-  .content4-con > .hidden > .card-con > .card > .text-box {
+  .content4-con > .swiper > .card-con > .card > .text-box {
     padding: 20px;
   }
-  .content4-con > .hidden > .card-con > .card > .text-box > .title {
+  .content4-con > .swiper > .card-con > .card > .text-box > .title {
     font-size: 14px;
   }
-  .content4-con > .hidden > .card-con > .card > .text-box > .sub {
+  .content4-con > .swiper > .card-con > .card > .text-box > .sub {
     font-size: 14px;
   }
 

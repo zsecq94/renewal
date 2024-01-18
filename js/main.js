@@ -55,181 +55,98 @@ $(document).ready(() => {
   setInterval(currentTime, 10);
   let interval = setInterval(nextSlide, 6000);
 
-  // content 영역 //
+  let isWeb = window.innerWidth > 767;
+  let swipers = [];
+
   const contents = [
     {
-      $prevBtn: $(".content1-con > .title-box > .nav-box > .prev"),
-      $nextBtn: $(".content1-con > .title-box > .nav-box > .next"),
-      $contentCon: $(".content1-con > .hidden > .card-con"),
-      translate: -16.7,
-      translate2: 16.9,
-      translateXs: 0,
-      translateIdx: 1,
-
-      // 모바일에서 데이터가 추가됐을때 수정
-      length: 5,
-
-      // 웹에서 데이터가 추가됐을때 수정
-      btnValid: [1, 3],
-      valid: -83.5,
+      content: ".content1-con > .mySwiper",
+      slidesPerView: isWeb ? 4 : 1,
+      spaceBetween: isWeb ? 30 : 10,
+      pagination: {
+        el: "",
+      },
+      navigation: {
+        nextEl: ".content1-con > .title-box > .nav-box > .next",
+        prevEl: ".content1-con > .title-box > .nav-box > .prev",
+      },
     },
     {
-      $prevBtn: $(".content2-con > .title-box > .nav-box > .prev"),
-      $nextBtn: $(".content2-con > .title-box > .nav-box > .next"),
-      $contentCon: $(".content2-con > .hidden > .card-con"),
-      translate: -20,
-      translate2: 20.5,
-      translateXs: 0,
-      translateIdx: 1,
-      length: 4,
-      btnValid: [1, 3],
-      valid: -80,
+      content: ".content2-con > .mySwiper",
+      slidesPerView: isWeb ? 3 : 1,
+      spaceBetween: isWeb ? 30 : 0,
+      pagination: {
+        el: ".content2-con > .mySwiper > .swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".content2-con > .title-box > .nav-box > .next",
+        prevEl: ".content2-con > .title-box > .nav-box > .prev",
+      },
     },
     {
-      $prevBtn: $(".content4-con > .title-box > .nav-box > .prev"),
-      $nextBtn: $(".content4-con > .title-box > .nav-box > .next"),
-      $contentCon: $(".content4-con > .hidden > .card-con"),
-      translate: -16.7,
-      translate2: 16.9,
-      translateXs: 0,
-      translateIdx: 1,
-      length: 5,
-      btnValid: [1, 3],
-      valid: -83.5,
-    },
-    {
-      $contentCon: $(".content6-con > .hidden"),
-      translate: -33.5,
-      translateXs: 0,
-      translateIdx: 1,
-      length: 2,
-      btnValid: [1, 3],
-      valid: -67,
+      content: ".content4-con > .mySwiper",
+      slidesPerView: isWeb ? 4 : 1,
+      spaceBetween: isWeb ? 30 : 10,
+      pagination: {
+        el: "",
+      },
+      navigation: {
+        nextEl: ".content4-con > .title-box > .nav-box > .next",
+        prevEl: ".content4-con > .title-box > .nav-box > .prev",
+      },
     },
   ];
 
-  contents.forEach((content, index) => {
-    let isDragging = false;
-    let startPoint = 0;
-    let endPoint = 0;
-    let initialTranslateXs = 0;
-
-    // web btn style
-    if (index !== 3) {
-      const contentBtnStyleUpdate = () => {
-        if (content.translateIdx <= content.btnValid[0]) {
-          content.$prevBtn.addClass("disabled");
-        } else if (content.translateIdx >= content.btnValid[1]) {
-          content.$nextBtn.addClass("disabled");
-        } else {
-          content.$prevBtn.removeClass("disabled");
-          content.$nextBtn.removeClass("disabled");
-        }
-      };
-
-      // prev
-      content.$prevBtn.click(() => {
-        if (content.translateIdx > content.btnValid[0]) {
-          content.translateXs -= content.translate2;
-          content.translateIdx--;
-          content.$contentCon.css("transform", `translateX(-${content.translateXs}%)`);
-        }
-        contentBtnStyleUpdate();
-      });
-
-      // next
-      content.$nextBtn.click(() => {
-        if (content.translateIdx < content.btnValid[1]) {
-          content.translateXs += content.translate2;
-          content.translateIdx++;
-          content.$contentCon.css("transform", `translateX(-${content.translateXs}%)`);
-        }
-        contentBtnStyleUpdate();
-      });
-
-      contentBtnStyleUpdate();
-    }
-
-    // touch 함수는 모바일 환경에서만 동작함
-    // mobile start
-    content.$contentCon.on("touchstart", (e) => {
-      isDragging = true;
-      startPoint = e.touches[0].pageX;
-      initialTranslateXs = content.translateXs;
+  const createSwiper = (content) => {
+    var swiper = new Swiper(content.content, {
+      slidesPerView: content.slidesPerView,
+      spaceBetween: content.spaceBetween,
+      pagination: content.pagination,
+      navigation: {
+        nextEl: content.navigation.nextEl,
+        prevEl: content.navigation.prevEl,
+      },
     });
 
-    // mobile move
-    content.$contentCon.on("touchmove", function (e) {
-      if (isDragging) {
-        const currentX = e.originalEvent.touches[0].clientX;
-        const dx = currentX - startPoint;
-        const percentageChange = (dx / $(this).width()) * 100;
-        content.translateXs = initialTranslateXs + percentageChange;
+    swipers.push(swiper);
 
-        if (content.translateXs > 0) content.translateXs = 0;
-        if (content.translateXs < content.valid) content.translateXs = content.valid;
-
-        content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
+    swiper.on("slideChange", function () {
+      if (this.activeIndex === 0) {
+        $(content.navigation.prevEl).addClass("disabled");
+        $(content.navigation.nextEl).removeClass("disabled");
+      } else if (this.activeIndex === 2) {
+        $(content.navigation.nextEl).addClass("disabled");
+        $(content.navigation.prevEl).removeClass("disabled");
+      } else {
+        $(content.navigation.prevEl).removeClass("disabled");
+        $(content.navigation.nextEl).removeClass("disabled");
       }
     });
 
-    // mobile end
-    content.$contentCon.on("touchend", (e) => {
-      isDragging = false;
-      endPoint = e.changedTouches[0].pageX;
-
-      if (content.translateIdx >= 1 && content.translateIdx <= content.length && startPoint > endPoint) {
-        let navCheck = startPoint - endPoint > 50;
-        if (navCheck) {
-          content.translateXs = content.translate * content.translateIdx;
-          content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
-          content.translateIdx++;
-          if (index === 1) {
-            circleStyleUpdate();
-          }
-        } else if (!navCheck) {
-          content.translateXs = content.translate * (content.translateIdx - 1);
-          content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
-        }
-      } else if (content.translateIdx >= 2 && content.translateIdx <= content.length + 1 && startPoint < endPoint) {
-        let navCheck = endPoint - startPoint > 50;
-        if (navCheck) {
-          content.translateXs = content.translate * (content.translateIdx - 2);
-          content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
-          content.translateIdx--;
-          if (index === 1) {
-            circleStyleUpdate();
-          }
-        } else if (!navCheck) {
-          content.translateXs = content.translate * (content.translateIdx - 1);
-          content.$contentCon.css("transform", `translateX(${content.translateXs}%)`);
-        }
-      }
-    });
-  });
-
-  // content2 bot circle
-  const $botBtn = $(".content2-con > .hidden > .bot-btn");
-
-  for (let i = 0; i < 5; i++) {
-    $botBtn.append(`<div class="circle"></div>`);
-  }
-
-  const $circle = $(".content2-con > .hidden > .bot-btn > .circle");
-  const circleStyleUpdate = () => {
-    let idx = contents[1].translateIdx;
-    $circle
-      .css({
-        border: "solid 1px #fff",
-      })
-      .each(function (index) {
-        $(this).css({
-          backgroundColor: idx === index + 1 ? "#fff" : "",
-        });
-      });
+    $(content.navigation.prevEl).addClass("disabled");
   };
 
-  circleStyleUpdate();
+  contents.forEach((content, index) => {
+    createSwiper(content);
+  });
+
+  $(window).resize(() => {
+    let checkWidth = window.innerWidth > 767;
+    if (isWeb !== checkWidth) {
+      isWeb = checkWidth;
+
+      swipers.forEach((swiper, index) => {
+        if (index !== 1) {
+          swiper.params.slidesPerView = isWeb ? 4 : 1;
+          swiper.params.spaceBetween = isWeb ? 30 : 10;
+        } else {
+          swiper.params.slidesPerView = isWeb ? 3 : 1;
+          swiper.params.spaceBetween = isWeb ? 30 : 0;
+        }
+        swiper.update();
+      });
+    }
+  });
 
   var container = document.getElementById("map1"); //지도를 담을 영역의 DOM 레퍼런스
   var options = {
