@@ -130,10 +130,17 @@ $(document).ready(() => {
     createSwiper(content);
   });
 
+  var footerSwiper = new Swiper(".footer1 > .con > .mySwiper", {
+    slidesPerView: window.innerWidth > 767 ? 5 : 2,
+    spaceBetween: 30,
+  });
+
   $(window).resize(() => {
     let checkWidth = window.innerWidth > 767;
     if (isWeb !== checkWidth) {
       isWeb = checkWidth;
+      footerSwiper.params.slidesPerView = isWeb ? 5 : 2;
+      footerSwiper.update();
 
       swipers.forEach((swiper, index) => {
         if (index !== 1) {

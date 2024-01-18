@@ -187,37 +187,123 @@ nav .sub-menu-con .sub-menu-box a span {
 
 footer {
   display: flex;
-  justify-content: center;
-  background-color: #191b1e;
-  min-width: 1280px;
+  flex-direction: column;
   width: 100%;
-  padding: 40px 0px;
+  min-width: 1280px;
 }
 
-footer > .footer-con {
-  box-sizing: border-box;
+footer > .footer1 {
+  width: 100%;
+  background-color: #f7f7f8;
+  display: flex;
+  justify-content: center;
+  padding: 54px 0px;
+}
+
+footer > .footer1 > .con {
   width: 1280px;
+}
+
+footer > .footer1 > .con > .swiper > .card-con > .card > img {
+  width: 100%;
+}
+
+footer > .footer2 {
+  width: 100%;
+  background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content7_bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > .footer2 > .con {
+  width: 1280px;
+  padding: 160px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 68px;
+}
+
+footer > .footer2 > .con > .text-box {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+footer > .footer2 > .con > .text-box > .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+footer > .footer2 > .con > .text-box > .sub {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+footer > .footer2 > .con > .btn-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+  border-radius: 25px;
+  background-color: #f26933;
+  cursor: pointer;
+}
+
+footer > .footer2 > .con > .btn-box > span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+footer > .footer2 > .con > .btn-box > img {
+  width: 18px;
+  height: 12px;
+}
+
+footer > .footer3 {
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #191b1e;
+  display: flex;
+  justify-content: center;
+}
+
+footer > .footer3 > .con {
+  width: 1280px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 
-footer > .footer-con > .box1 {
+footer > .footer3 > .con > .box1 {
   line-height: 120%;
 }
 
-footer > .footer-con > .box1 > img {
+footer > .footer3 > .con > .box1 > p > br {
+  display: none;
+}
+
+footer > .footer3 > .con > .box1 > img {
   width: 210px;
   margin-bottom: 1%;
 }
 
-footer > .footer-con > .box1 > p {
+footer > .footer3 > .con > .box1 > p {
   font-size: 14px;
   color: #fff;
   opacity: 0.5;
 }
 
-footer > .footer-con > .box2 > p {
+footer > .footer3 > .con > .box2 > p {
   font-size: 14px;
   color: #fff;
   opacity: 0.25;
@@ -357,18 +443,82 @@ footer > .footer-con > .box2 > p {
 
   footer {
     box-sizing: border-box;
-    padding: 35px 24px;
     min-width: 100%;
   }
 
-  footer > .footer-con {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    gap: 5%;
+  footer > .footer1 {
+    padding: 20px;
   }
 
-  footer > .footer-con > .box2 {
-    margin-top: 2%;
+  footer > .footer1 > .con {
+    width: 100%;
+  }
+
+  footer > .footer2 {
+    width: 100%;
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/content7_bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer > .footer2 > .con {
+    width: 100%;
+    padding: 70px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  footer > .footer2 > .con > .text-box {
+    text-align: center;
+  }
+
+  footer > .footer2 > .con > .text-box > .title {
+    font-size: 30px;
+  }
+
+  footer > .footer2 > .con > .text-box > .sub {
+    font-size: 20px;
+  }
+
+  footer > .footer3 > .con {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0px 24px;
+  }
+
+  footer > .footer3 > .con > .box1 {
+    line-height: 120%;
+
+    margin-bottom: 20px;
+  }
+
+  footer > .footer3 > .con > .box1 > img {
+    width: 210px;
+    margin-bottom: 20px;
+  }
+
+  footer > .footer3 > .con > .box1 > p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  footer > .footer3 > .con > .box1 > p > br {
+    display: block;
+  }
+
+  footer > .footer3 > .con > .box2 > p {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.25;
   }
 }
