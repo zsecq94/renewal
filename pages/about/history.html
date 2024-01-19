@@ -1,1 +1,217 @@
-<div><h2>history 페이지</h2></div>
+<div class="history-con">
+  <!-- <div class="title-box">
+    <p class="title">어제보다 오늘,</p>
+    <p class="title">오늘보다 내일 더 성장 하겠습니다.</p>
+  </div>
+  <div class="content-con">
+    <div class="left">
+      <span class="active">2024</span>
+      <div class="dashed"></div>
+      <span>2023</span>
+      <div class="dashed"></div>
+      <span>2022</span>
+      <div class="dashed"></div>
+      <span>2021</span>
+    </div>
+    <div class="right">
+      <div class="year-box">
+        <span class="year active">2024</span>
+        <div class="content-con">
+          <div class="content-box">
+            <span class="mon">01</span>
+            <div class="span-box">
+              <span>키르키스공화국 (주)키르키스인더스트리 업무협약 체결</span>
+              <span>제주지사 Open</span>
+              <span>일본 사단법인 자연과에너지 업무협약 체결</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="year-box">
+        <span class="year">2023</span>
+        <div class="content-con">
+          <div class="content-box">
+            <span class="mon">12</span>
+            <div class="span-box">
+              <span>경남지사 Open</span>
+              <span>AI바우처 지원사업 공급기업 등록</span>
+              <span>한국서부발전 중소기업 좋은 일자리 만들기 아이디어 공모전 우수상</span>
+              <span>한국전력 KTP(KEPCO Trust Partner)인증</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">11</span>
+            <div class="span-box">
+              <span>목포대학교 산,학 협력 협약</span>
+              <span>(주)태산AMC대부 Fintech 사업을 위한 업무협약 체결 (자동차담보대출)</span>
+              <span>(주)에코파워 Fintech 사업을 위한 업무협약 체결 (재생에너지발전소)</span>
+              <span>JM에너지솔루션(주) Fintech 사업을 위한 업무협약 체결 (ESS+전기차충전기)</span>
+              <span>Fintech 사업부 출범</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">10</span>
+            <div class="span-box">
+              <span>ISO 9001 인증</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">09</span>
+            <div class="span-box">
+              <span>(주)에코모션 업무협약 체결</span>
+              <span>(주)애자일소다 업무협약 체결</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">08</span>
+            <div class="span-box">
+              <span>(주)에스디플렉스 업무협약 체결</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">05</span>
+            <div class="span-box">
+              <span>(주)윈월드 업무협약 체결</span>
+              <span>벤쳐기업인증 (혁신성장유형)</span>
+              <span>녹색에너지 우수기업 대상</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">04</span>
+            <div class="span-box">
+              <span>한국소프트웨어산업협회 소프트웨어사업자 등록(B23-261148-003)</span>
+              <span>기업부설연구소 설립</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <span class="mon">03</span>
+            <div class="span-box">
+              <span>렉스이노베이션 주식회사 (사명 변경) – 에너지혁신 기업</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="year-box">
+        <span class="year">2022</span>
+        <div class="content-con">
+          <div class="content-box">
+            <span class="mon">09</span>
+            <div class="span-box">
+              <span>한국전력(KEPCO) 연구소 기업 협약 (제1463호)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="year-box">
+        <span class="year">2021</span>
+        <div class="content-con">
+          <div class="content-box">
+            <span class="mon">08</span>
+            <div class="span-box">
+              <span>주식회사 왕산엔지니어링 설립</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+<style>
+  .history-con {
+    width: 1280px;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+  }
+  .history-con > .title-box > .title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .history-con > .content-con {
+    display: flex;
+    gap: 95px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+
+  .history-con > .content-con > .left {
+    border-right: 1px solid #111;
+    border-left: 1px solid #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+    padding: 40px 60px;
+  }
+
+  .history-con > .content-con > .left > .dashed {
+    height: 40px;
+    border-left: dashed 1px #aaaaaa;
+  }
+
+  .history-con > .content-con > .left > span {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .history-con > .content-con > .left > .active {
+    font-weight: 700;
+  }
+
+  .history-con > .content-con > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .history-con > .content-con > .right > .line {
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
+  }
+
+  .history-con > .content-con > .right > .year-box {
+    display: flex;
+    gap: 60px;
+  }
+  .history-con > .content-con > .right > .year-box > .year {
+    color: #e9e9e9;
+    font-size: 80px;
+    font-weight: 900;
+    width: 200px;
+  }
+  .history-con > .content-con > .right > .year-box > .active {
+    color: #f26933;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box {
+    display: flex;
+    gap: 30px;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
+    font-size: 18px;
+    font-weight: 300;
+  }
+</style>

@@ -47,7 +47,7 @@ div {
   min-width: 1280px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #app {
     min-width: 100%;
   }
