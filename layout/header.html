@@ -17,24 +17,7 @@
     let scrollCheck = false;
     let isHeaderHover = false;
     let lang = "KR";
-
     let isMobile = $(window).width() < 750;
-
-    $(window).resize(function () {
-      let wasMobile = isMobile;
-      isMobile = $(window).width() < 750;
-      if (wasMobile != isMobile) {
-        if (!isMobile) {
-          $(".menu-box").children(".sub-menu-box").remove();
-          $("header > .menu-con").removeAttr("style");
-        }
-        if (scrollCheck) {
-          updateHeaderStyle(true);
-        } else {
-          updateHeaderStyle(false);
-        }
-      }
-    });
 
     const langSpan = (val, state) => {
       if (state) {
@@ -192,6 +175,20 @@
       }
     );
 
+    $(".menu-con > .menu-box > .title-box > a").click(() => {
+      mbMenuOpenCheck = !mbMenuOpenCheck;
+      if (isMobile) {
+        updateHeaderStyle(false);
+        $("body").removeClass("no-scroll");
+        $(".menu-con > .menu-box > .title-box > img").attr(
+          "src",
+          "https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png"
+        );
+        $(".menu-box").children(".sub-menu-box").remove();
+        $menuCon.stop().slideUp();
+      }
+    });
+
     $(".menu-con > .menu-box > .title-box > img").click(function () {
       if (isMobile) {
         let index = $(this).closest(".menu-box").index();
@@ -199,6 +196,20 @@
         selectedSubMenu.find("a").css({
           "font-size": "16px",
           "font-weight": "500",
+        });
+
+        selectedSubMenu.find("a").click(() => {
+          mbMenuOpenCheck = !mbMenuOpenCheck;
+          if (isMobile) {
+            updateHeaderStyle(false);
+            $("body").removeClass("no-scroll");
+            $(".menu-con > .menu-box > .title-box > img").attr(
+              "src",
+              "https://zsecq94.github.io/renewal/assets/images/icon/down_icon.png"
+            );
+            $(".menu-box").children(".sub-menu-box").remove();
+            $menuCon.stop().slideUp();
+          }
         });
 
         if (!$(this).closest(".menu-box").has(".sub-menu-box").length) {
@@ -238,6 +249,22 @@
         updateHeaderStyle(false);
       } else {
         updateHeaderStyle(isHeaderHover);
+      }
+    });
+
+    $(window).resize(function () {
+      let wasMobile = isMobile;
+      isMobile = $(window).width() < 750;
+      if (wasMobile != isMobile) {
+        if (!isMobile) {
+          $(".menu-box").children(".sub-menu-box").remove();
+          $("header > .menu-con").removeAttr("style");
+        }
+        if (scrollCheck) {
+          updateHeaderStyle(true);
+        } else {
+          updateHeaderStyle(false);
+        }
       }
     });
 

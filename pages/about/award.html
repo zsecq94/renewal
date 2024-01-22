@@ -1,3 +1,134 @@
-<div>
-  <h2>수상 페이지</h2>
+<div class="award-con">
+  <div class="title-box">
+    <p class="title">작은 변화부터 꾸준히 실천합니다</p>
+    <p class="title">2023 ~ 2022</p>
+  </div>
+  <div class="card-con">
+    <div class="card">
+      <img class="result" src="https://zsecq94.github.io/renewal/assets/images/content/award_1.png" alt="" />
+      <div class="text-box">
+        <span class="year">2023</span>
+        <span class="title">혁신한국인 & 파워코리아 대상</span>
+        <span class="sub">기술혁신(에너지저장장치)</span>
+      </div>
+      <img class="expansion" src="https://zsecq94.github.io/renewal/assets/images/icon/expansion_icon.png" alt="" />
+    </div>
+    <div class="card">
+      <img class="result" src="https://zsecq94.github.io/renewal/assets/images/content/award_2.png" alt="" />
+      <div class="text-box">
+        <span class="year">2023</span>
+        <span class="title">녹색 에너지 우수기업 대상</span>
+        <span class="sub">녹색기술부문</span>
+      </div>
+      <img class="expansion" src="https://zsecq94.github.io/renewal/assets/images/icon/expansion_icon.png" alt="" />
+    </div>
+    <div class="card">
+      <img class="result" src="https://zsecq94.github.io/renewal/assets/images/content/award_2.png" alt="" />
+      <div class="text-box">
+        <span class="year">2022</span>
+        <span class="title">대한민국 브랜드평가 1위</span>
+        <span class="sub">기술혁신브랜드(수소력발전소)</span>
+      </div>
+      <img class="expansion" src="https://zsecq94.github.io/renewal/assets/images/icon/expansion_icon.png" alt="" />
+    </div>
+  </div>
+  <div class="pages-box">
+    <span>1</span>
+  </div>
 </div>
+
+<style>
+  .award-con {
+    width: 1280px;
+  }
+  .award-con > .title-box {
+    margin-bottom: 30px;
+  }
+  .award-con > .title-box > .title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  .award-con > .card-con {
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 58px;
+    border-top: 2px solid #111;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+  }
+
+  .award-con > .card-con > .card > .expansion {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .award-con > .card-con > .card {
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    background: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #111;
+    transition: 0.5s;
+  }
+
+  .award-con > .card-con > .card > .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .award-con > .card-con > .card > .text-box > .year {
+    opacity: 0.5;
+  }
+  .award-con > .card-con > .card > .text-box > .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .award-con > .card-con > .card > .text-box > .sub {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .award-con > .card-con > .card > img {
+    width: 100%;
+  }
+
+  .award-con > .card-con > .card:hover {
+    background: #464646;
+    color: white;
+  }
+
+  .award-con > .card-con > .card:hover .result {
+    opacity: 0.25;
+  }
+
+  .award-con > .card-con > .card:hover .expansion {
+    display: block;
+  }
+
+  .award-con > .pages-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .award-con > .pages-box > span {
+    color: #fff;
+    background-color: #111;
+    padding: 7px 13px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+</style>
