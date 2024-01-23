@@ -214,4 +214,96 @@
     font-size: 18px;
     font-weight: 300;
   }
+
+  @media screen and (max-width: 768px) {
+    .history-con {
+      width: 100%;
+      gap: 40px;
+    }
+    .history-con > .title-box > .title {
+      font-size: 24px;
+      line-height: 130%;
+    }
+    .history-con > .content-con {
+      display: flex;
+      flex-direction: column;
+      gap: 95px;
+      box-sizing: border-box;
+      align-items: start;
+    }
+
+    .history-con > .content-con > .left {
+      border-right: none;
+      border-left: none;
+      flex-direction: row;
+
+      gap: 6px;
+      padding: 20px 60px;
+    }
+
+    .history-con > .content-con > .left > .dashed {
+      height: 1px;
+      width: 20px;
+      border-left: dashed 1px #aaaaaa;
+    }
+
+    .history-con > .content-con > .left > span {
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    .history-con > .content-con > .left > .active {
+      font-weight: 700;
+    }
+
+    .history-con > .content-con > .right {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      width: 100%;
+    }
+
+    .history-con > .content-con > .right > .line {
+      height: 1px;
+      width: 100%;
+      background-color: #eeeeee;
+    }
+
+    .history-con > .content-con > .right > .year-box {
+      display: flex;
+      gap: 60px;
+    }
+    .history-con > .content-con > .right > .year-box > .year {
+      color: #e9e9e9;
+      font-size: 80px;
+      font-weight: 900;
+      width: 200px;
+    }
+    .history-con > .content-con > .right > .year-box > .active {
+      color: #f26933;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box {
+      display: flex;
+      gap: 30px;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
 </style>

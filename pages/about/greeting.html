@@ -60,6 +60,7 @@
   .grt-con > .title-box > .title {
     font-size: 38px;
     font-weight: 700;
+    line-height: 140%;
   }
 
   .grt-con > .img-box {
@@ -67,7 +68,7 @@
     background-image: url("https://zsecq94.github.io/renewal/assets/images/bg/greeting_bg.png");
     background-position: center;
     background-size: cover;
-    height: 436px;
+    height: 480px;
   }
 
   .grt-con > .img-box > img {
@@ -89,7 +90,7 @@
 
   .grt-con > .img-box > .line {
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 1px;
     bottom: 20%;
     left: 5%;
@@ -97,7 +98,7 @@
   }
 
   .grt-con > .text-box {
-    line-height: 170%;
+    line-height: 190%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -135,21 +136,8 @@
       width: 300px;
     }
 
-    .grt-con > .img-box > .text-box {
-      top: 28%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
     .grt-con > .img-box > .text-box > img {
       width: 200px;
-    }
-
-    .grt-con > .img-box > .line {
-      width: 85%;
-      top: 15%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .grt-con > .text-box {
@@ -162,6 +150,21 @@
     }
     .grt-con > .name-box > span {
       font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 578px) {
+    .grt-con > .img-box > .text-box {
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .grt-con > .img-box > .line {
+      width: 85%;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 

@@ -176,8 +176,8 @@
     );
 
     $(".menu-con > .menu-box > .title-box > a").click(() => {
-      mbMenuOpenCheck = !mbMenuOpenCheck;
       if (isMobile) {
+        mbMenuOpenCheck = !mbMenuOpenCheck;
         updateHeaderStyle(false);
         $("body").removeClass("no-scroll");
         $(".menu-con > .menu-box > .title-box > img").attr(
