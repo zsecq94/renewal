@@ -1,3 +1,84 @@
+<script>
+  $(document).ready(() => {
+    let isMobile = $(window).width() < 750;
+
+    $(window).resize(function () {
+      isMobile = $(window).width() < 750;
+    });
+
+    const $elements = $(".opserver");
+    const $span = $(".history-con > .content-con > .left > span");
+    const $left = $(".history-con > .content-con > .left");
+    $(window).scroll(function () {
+      let height = $(document).scrollTop();
+
+      $elements.each(function (index) {
+        let start = isMobile ? $(this).offset().top - 250 : $(this).offset().top - 250;
+        let end = isMobile
+          ? $(this).offset().top - 180 + $(this).height()
+          : $(this).offset().top - 130 + $(this).height();
+
+        if ((index === 0 && 0 < height && height < end) || (index !== 0 && start < height && height < end)) {
+          $(this).find("span").addClass("active");
+          $($span).eq(index).addClass("active");
+        } else {
+          $(this).find("span").removeClass("active");
+          $($span).eq(index).removeClass("active");
+        }
+      });
+    });
+
+    $span.click(function () {
+      const index = $span.not(".dashed").index(this);
+
+      $("html, body").animate(
+        {
+          scrollTop: $($elements[index]).offset().top - 249,
+        },
+        500
+      );
+    });
+
+    let didScroll;
+    let lastScrollTop = 0;
+    let delta = 5;
+
+    $(window).scroll(function (e) {
+      didScroll = true;
+    });
+
+    setInterval(function () {
+      if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250);
+
+    function hasScrolled() {
+      if (isMobile) {
+        let st = $(this).scrollTop();
+
+        if (Math.abs(lastScrollTop - st) <= delta) {
+          return;
+        }
+
+        if (st > lastScrollTop && st > 80) {
+          $left.css({
+            top: "0px",
+          });
+        } else {
+          if (st + $(window).height() < $(document).height()) {
+            $left.css({
+              top: "70px",
+            });
+          }
+        }
+        lastScrollTop = st;
+      }
+    }
+  });
+</script>
+
 <div class="history-con">
   <div class="title-box">
     <p class="title">어제보다 오늘,</p>
@@ -5,7 +86,7 @@
   </div>
   <div class="content-con">
     <div class="left">
-      <span class="active">2024</span>
+      <span>2024</span>
       <div class="dashed"></div>
       <span>2023</span>
       <div class="dashed"></div>
@@ -14,7 +95,7 @@
       <span>2021</span>
     </div>
     <div class="right">
-      <div class="year-box">
+      <div class="year-box opserver">
         <span class="year active">2024</span>
         <div class="content-con">
           <div class="content-box">
@@ -28,7 +109,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="year-box">
+      <div class="year-box opserver">
         <span class="year">2023</span>
         <div class="content-con">
           <div class="content-box">
@@ -93,7 +174,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="year-box">
+      <div class="year-box opserver">
         <span class="year">2022</span>
         <div class="content-con">
           <div class="content-box">
@@ -105,7 +186,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="year-box">
+      <div class="year-box opserver">
         <span class="year">2021</span>
         <div class="content-con">
           <div class="content-box">
@@ -119,191 +200,3 @@
     </div>
   </div>
 </div>
-
-<style>
-  .history-con {
-    width: 1280px;
-    color: #111;
-    display: flex;
-    flex-direction: column;
-    gap: 85px;
-  }
-  .history-con > .title-box > .title {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 140%;
-  }
-  .history-con > .content-con {
-    display: flex;
-    gap: 95px;
-    box-sizing: border-box;
-    align-items: start;
-  }
-
-  .history-con > .content-con > .left {
-    border-right: 1px solid #111;
-    border-left: 1px solid #111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 10px;
-    padding: 40px 60px;
-  }
-
-  .history-con > .content-con > .left > .dashed {
-    height: 40px;
-    border-left: dashed 1px #aaaaaa;
-  }
-
-  .history-con > .content-con > .left > span {
-    font-size: 30px;
-    font-weight: 300;
-  }
-
-  .history-con > .content-con > .left > .active {
-    font-weight: 700;
-  }
-
-  .history-con > .content-con > .right {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    width: 100%;
-  }
-
-  .history-con > .content-con > .right > .line {
-    height: 1px;
-    width: 100%;
-    background-color: #eeeeee;
-  }
-
-  .history-con > .content-con > .right > .year-box {
-    display: flex;
-    gap: 60px;
-  }
-  .history-con > .content-con > .right > .year-box > .year {
-    color: #e9e9e9;
-    font-size: 80px;
-    font-weight: 900;
-    width: 200px;
-  }
-  .history-con > .content-con > .right > .year-box > .active {
-    color: #f26933;
-  }
-  .history-con > .content-con > .right > .year-box > .content-con {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .history-con > .content-con > .right > .year-box > .content-con > .content-box {
-    display: flex;
-    gap: 30px;
-  }
-  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
-    font-size: 18px;
-    font-weight: 300;
-  }
-
-  @media screen and (max-width: 768px) {
-    .history-con {
-      width: 100%;
-      gap: 40px;
-    }
-    .history-con > .title-box > .title {
-      font-size: 24px;
-      line-height: 130%;
-    }
-    .history-con > .content-con {
-      display: flex;
-      flex-direction: column;
-      gap: 95px;
-      box-sizing: border-box;
-      align-items: start;
-    }
-
-    .history-con > .content-con > .left {
-      border-right: none;
-      border-left: none;
-      flex-direction: row;
-
-      gap: 6px;
-      padding: 20px 60px;
-    }
-
-    .history-con > .content-con > .left > .dashed {
-      height: 1px;
-      width: 20px;
-      border-left: dashed 1px #aaaaaa;
-    }
-
-    .history-con > .content-con > .left > span {
-      font-size: 30px;
-      font-weight: 300;
-    }
-
-    .history-con > .content-con > .left > .active {
-      font-weight: 700;
-    }
-
-    .history-con > .content-con > .right {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      width: 100%;
-    }
-
-    .history-con > .content-con > .right > .line {
-      height: 1px;
-      width: 100%;
-      background-color: #eeeeee;
-    }
-
-    .history-con > .content-con > .right > .year-box {
-      display: flex;
-      gap: 60px;
-    }
-    .history-con > .content-con > .right > .year-box > .year {
-      color: #e9e9e9;
-      font-size: 80px;
-      font-weight: 900;
-      width: 200px;
-    }
-    .history-con > .content-con > .right > .year-box > .active {
-      color: #f26933;
-    }
-    .history-con > .content-con > .right > .year-box > .content-con {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .history-con > .content-con > .right > .year-box > .content-con > .content-box {
-      display: flex;
-      gap: 30px;
-    }
-    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
-      font-size: 18px;
-      font-weight: 700;
-    }
-    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
-      font-size: 18px;
-      font-weight: 300;
-    }
-  }
-</style>
