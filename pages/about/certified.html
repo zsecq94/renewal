@@ -1,3 +1,22 @@
+<script>
+  $(document).ready(() => {
+    const $cardImg = $(".cer-con > .card-con > .card ");
+    const $modal = $(".modal");
+    const $modalImg = $(".modal > img");
+    const $modalClose = $(".modal > span");
+
+    $cardImg.click(function () {
+      const modalImgSrc = $(this).parent().find("img")[0].src;
+      $modalImg.attr("src", modalImgSrc);
+      $modal.css("display", "flex");
+    });
+
+    $modalClose.click(() => {
+      $modal.css("display", "none");
+    });
+  });
+</script>
+
 <div class="cer-con">
   <div class="title-box">
     <p class="title">작은 변화부터 꾸준히 실천합니다</p>
@@ -35,6 +54,11 @@
   </div>
 </div>
 
+<div class="modal">
+  <img src="" alt="" />
+  <span>X</span>
+</div>
+
 <style>
   .cer-con {
     width: 1280px;
@@ -66,7 +90,6 @@
     left: 50%;
     width: 60px;
     transform: translate(-50%, -50%);
-    cursor: pointer;
   }
   .cer-con > .card-con > .card {
     position: relative;
@@ -79,7 +102,9 @@
     gap: 24px;
     color: #111;
     transition: 0.5s;
+    cursor: pointer;
   }
+
   .cer-con > .card-con > .card > img {
     width: 100%;
   }
@@ -87,7 +112,6 @@
   .cer-con > .card-con > .card > span {
     font-size: 20px;
     font-weight: 600;
-
     text-align: center;
   }
 
@@ -109,6 +133,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .cer-con > .pages-box > span {
     color: #fff;
     background-color: #111;
@@ -116,5 +141,111 @@
     border-radius: 18px;
     font-size: 16px;
     font-weight: 700;
+  }
+
+  .modal {
+    box-sizing: border-box;
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    z-index: 99;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal > img {
+    height: 100%;
+  }
+
+  .modal > span {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .cer-con {
+      width: 100%;
+    }
+
+    .cer-con > .title-box {
+      margin-bottom: 30px;
+    }
+    .cer-con > .title-box > .title {
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    .cer-con > .card-con {
+      padding: 40px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-top: 2px solid #111;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 30px;
+    }
+
+    .cer-con > .card-con > .card > .expansion {
+      display: none;
+    }
+    .cer-con > .card-con > .card {
+      padding: 24px;
+      gap: 24px;
+    }
+    .cer-con > .card-con > .card > img {
+      width: 100%;
+    }
+
+    .cer-con > .card-con > .card > span {
+      font-size: 16px;
+    }
+
+    .cer-con > .pages-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cer-con > .pages-box > span {
+      color: #fff;
+      background-color: #111;
+      padding: 7px 13px;
+      border-radius: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .modal {
+      display: none;
+      top: 0;
+      left: 0;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #111;
+      z-index: 99;
+      padding: 40px;
+      align-items: center;
+    }
+
+    .modal > img {
+      width: 100%;
+      height: auto;
+    }
+
+    .modal > span {
+      font-size: 30px;
+      top: 2%;
+      right: 5%;
+    }
   }
 </style>

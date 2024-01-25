@@ -58,13 +58,9 @@
       if (isMobile) {
         let st = $(this).scrollTop();
         if (st > 670) {
-          $left.css({
-            borderTop: "none",
-          });
+          $left.css({ borderTop: "none" });
         } else {
-          $left.css({
-            borderTop: "solid 1px #111",
-          });
+          $left.css({ borderTop: "solid 1px #111" });
         }
 
         if (Math.abs(lastScrollTop - st) <= delta) {
@@ -72,14 +68,10 @@
         }
 
         if (st > lastScrollTop && st > 80) {
-          $left.css({
-            top: "0px",
-          });
+          $left.css({ top: "0px" });
         } else {
           if (st + $(window).height() < $(document).height()) {
-            $left.css({
-              top: "70px",
-            });
+            $left.css({ top: "70px" });
           }
         }
         lastScrollTop = st;
@@ -209,3 +201,191 @@
     </div>
   </div>
 </div>
+
+<style>
+  .history-con {
+    width: 1280px;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+  }
+  .history-con > .title-box > .title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .history-con > .content-con {
+    display: flex;
+    gap: 95px;
+    box-sizing: border-box;
+    align-items: start;
+  }
+
+  .history-con > .content-con > .left {
+    position: sticky;
+    top: 150px;
+    border-right: 1px solid #111;
+    border-left: 1px solid #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 40px;
+    background-color: #fff;
+  }
+
+  .history-con > .content-con > .left > .dashed {
+    height: 40px;
+    border-left: dashed 1px #aaaaaa;
+  }
+
+  .history-con > .content-con > .left > span {
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  .history-con > .content-con > .left > .active {
+    font-weight: 700;
+  }
+
+  .history-con > .content-con > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .history-con > .content-con > .right > .line {
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
+  }
+
+  .history-con > .content-con > .right > .year-box {
+    display: flex;
+    gap: 60px;
+    background: #fff;
+  }
+  .history-con > .content-con > .right > .year-box > .year {
+    color: #e9e9e9;
+    font-size: 80px;
+    font-weight: 900;
+    width: 200px;
+    transition: 0.5s;
+  }
+  .history-con > .content-con > .right > .year-box > .active {
+    color: #f26933;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box {
+    display: flex;
+    gap: 30px;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  @media screen and (max-width: 768px) {
+    .history-con {
+      width: 100%;
+      gap: 40px;
+    }
+    .history-con > .title-box > .title {
+      font-size: 24px;
+      line-height: 130%;
+    }
+    .history-con > .content-con {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .history-con > .content-con > .left {
+      top: 0px;
+      left: -24px;
+      border-right: none;
+      border-left: none;
+      border-bottom: solid 1px #000;
+      border-top: solid 1px #000;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0px;
+      padding: 20px 0px;
+      width: 100%;
+    }
+
+    .history-con > .content-con > .left > .dashed {
+      height: 1px;
+      width: 20px;
+      border-top: dashed 1px #aaaaaa;
+    }
+
+    .history-con > .content-con > .left > span {
+      font-size: 20px;
+    }
+
+    .history-con > .content-con > .right {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .history-con > .content-con > .right > .line {
+      height: 1px;
+      width: 100%;
+      background-color: #eeeeee;
+    }
+
+    .history-con > .content-con > .right > .year-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #fff;
+    }
+    .history-con > .content-con > .right > .year-box > .year {
+      font-size: 40px;
+      width: 100px;
+    }
+
+    .history-con > .content-con > .right > .year-box > .content-con {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box {
+      display: flex;
+      gap: 20px;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .mon {
+      font-size: 16px;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .history-con > .content-con > .right > .year-box > .content-con > .content-box > .span-box > span {
+      font-size: 16px;
+    }
+  }
+</style>
