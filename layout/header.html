@@ -49,6 +49,8 @@
       if (isMobile) {
         headerMenu = "black";
         headerBgColor = state ? "rgba(255, 255, 255, 0.9)" : "transparent";
+        let backdropFilter = state ? "blur(5px)" : "none";
+        $header.css("backdropFilter", backdropFilter);
       } else {
         headerBgColor = state ? "white" : "transparent";
         headerMenu = state ? "black" : "white";

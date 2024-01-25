@@ -57,6 +57,15 @@
     function hasScrolled() {
       if (isMobile) {
         let st = $(this).scrollTop();
+        if (st > 670) {
+          $left.css({
+            borderTop: "none",
+          });
+        } else {
+          $left.css({
+            borderTop: "solid 1px #111",
+          });
+        }
 
         if (Math.abs(lastScrollTop - st) <= delta) {
           return;
