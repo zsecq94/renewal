@@ -1,2 +1,72 @@
 .visit-con {
+  width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  direction: rtl;
+}
+
+.visit-con > .text-box,
+.visit-con > .map {
+  direction: ltr;
+}
+
+.visit-con > .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.visit-con > .text-box > .title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.visit-con > .text-box > .sub-box {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  align-items: center;
+}
+
+.visit-con > .text-box > .sub-box > .name {
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 35px;
+}
+
+.visit-con > .text-box > .sub-box > .name::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+.visit-con > .text-box > .sub-box:nth-child(2) > .name::before {
+  background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -52px;
+}
+
+.visit-con > .text-box > .sub-box:nth-child(4) > .name::before {
+  background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -136px;
+}
+
+.visit-con > .text-box > .sub-box:nth-child(6) > .name::before {
+  background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -10px;
+}
+
+.visit-con > .text-box > .sub-box:nth-child(8) > .name::before {
+  background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -94px;
+}
+
+.visit-con > .text-box > .content {
+  font-size: 18px;
+  font-weight: 400;
+}
+.visit-con > .text-box > .line {
+  width: 100%;
+  height: 1px;
+  border-top: solid 1px #eee;
 }
