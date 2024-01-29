@@ -1,41 +1,48 @@
 .visit-con {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   width: 1280px;
+}
+.visit-con > .content-con {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  direction: rtl;
+}
+.visit-con > .content-con > .title {
+  font-size: 38px;
+  font-weight: 700;
 }
 
-.visit-con > .text-box,
-.visit-con > .map {
-  direction: ltr;
-}
-
-.visit-con > .text-box {
+.visit-con > .content-con > .sub-con {
+  top: 80px;
+  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.visit-con > .text-box > .title {
-  font-size: 38px;
-  font-weight: 700;
-  margin-bottom: 28px;
+  width: 47%;
 }
 
-.visit-con > .text-box > .sub-box {
+.visit-con > .content-con > .sub-con > .sub-box {
   display: grid;
   grid-template-columns: 2fr 8fr;
-  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #eee;
+  font-size: 18px;
 }
 
-.visit-con > .text-box > .sub-box > .name {
-  font-size: 18px;
+.visit-con > .content-con > .sub-con > .sub-box > .content {
+  font-weight: 400;
+}
+
+.visit-con > .content-con > .sub-con > .sub-box > .name {
   font-weight: 600;
   position: relative;
-  padding-left: 35px;
+  padding-left: 40px;
 }
 
-.visit-con > .text-box > .sub-box > .name::before {
+.visit-con > .content-con > .sub-con > .sub-box > .name::before {
   content: "";
   position: absolute;
   top: 0%;
@@ -45,28 +52,62 @@
   height: 22px;
 }
 
-.visit-con > .text-box > .sub-box:nth-child(2) > .name::before {
+.visit-con > .content-con > .sub-con > .sub-box:nth-child(1) > .name::before {
   background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -52px;
 }
 
-.visit-con > .text-box > .sub-box:nth-child(4) > .name::before {
+.visit-con > .content-con > .sub-con > .sub-box:nth-child(2) > .name::before {
   background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -136px;
 }
 
-.visit-con > .text-box > .sub-box:nth-child(6) > .name::before {
+.visit-con > .content-con > .sub-con > .sub-box:nth-child(3) > .name::before {
   background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -10px;
 }
 
-.visit-con > .text-box > .sub-box:nth-child(8) > .name::before {
+.visit-con > .content-con > .sub-con > .sub-box:nth-child(4) > .name::before {
   background: url("./assets/images/content/sprites_visit.png") no-repeat -10px -94px;
 }
 
-.visit-con > .text-box > .content {
-  font-size: 18px;
-  font-weight: 400;
+#map3,
+#map4,
+#map5 {
+  height: 325px;
 }
-.visit-con > .text-box > .line {
-  width: 100%;
-  height: 1px;
-  border-top: solid 1px #eee;
+
+@media screen and (max-width: 768px) {
+  .visit-con {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+  .visit-con > .content-con {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .visit-con > .content-con > .title {
+    font-size: 24px;
+  }
+
+  .visit-con > .content-con > .sub-con {
+    top: 80px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .visit-con > .content-con > .sub-con > .sub-box {
+    grid-template-columns: 3fr 7fr;
+    font-size: 16px;
+  }
+
+  #map3,
+  #map4,
+  #map5 {
+    height: 300px;
+  }
 }

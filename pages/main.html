@@ -152,7 +152,7 @@
     var container = document.getElementById("map1"); //지도를 담을 영역의 DOM 레퍼런스
     var options = {
       //지도를 생성할 때 필요한 기본 옵션
-      center: new kakao.maps.LatLng(35.019686319905965, 126.7800942636125), //지도의 중심좌표.
+      center: new kakao.maps.LatLng(0, 0),
       level: 5,
       draggable: $(window).width() < 750 ? false : true,
     };
@@ -172,7 +172,7 @@
 
     var container2 = document.getElementById("map2");
     var options2 = {
-      center: new kakao.maps.LatLng(37.909321215454796, 126.7800942636125),
+      center: new kakao.maps.LatLng(0, 0),
       level: 8,
       draggable: $(window).width() < 750 ? false : true,
     };
@@ -187,7 +187,6 @@
 
     // marker2.setMap(map2);
 
-    map.relayout(); // 맵을 리레이아웃( 다시불러오기)
     map.setCenter(new kakao.maps.LatLng(35.019686319905965, 126.7800942636125));
     map2.setCenter(new kakao.maps.LatLng(37.909321215454796, 126.83752088233827));
   });
