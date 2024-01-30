@@ -4,13 +4,15 @@
     const router = () => {
       let route = window.location.hash.substr(2);
 
-      fileName = route.split("/")[1];
-      let selector = "#about-content";
-      let filePath = "pages/about/";
+      fileName = route.split("/");
+      if (fileName[0] === "about") {
+        let selector = "#about-content";
+        let filePath = "pages/about/";
 
-      $.get(filePath + fileName + ".html", (data) => {
-        $(selector).html(data);
-      });
+        $.get(filePath + fileName[1] + ".html", (data) => {
+          $(selector).html(data);
+        });
+      }
     };
 
     $(window).on("hashchange", router);
@@ -20,15 +22,15 @@
     const $textTitlt = $(".about > .text-box > .title");
     const $textSub = $(".about > .text-box > .sub");
     const name =
-      fileName === "greeting"
+      fileName[1] === "greeting"
         ? "인사말"
-        : fileName === "history"
+        : fileName[1] === "history"
         ? "연혁"
-        : fileName === "certified"
+        : fileName[1] === "certified"
         ? "인증내역"
-        : fileName === "award"
+        : fileName[1] === "award"
         ? "수상내역"
-        : fileName === "member"
+        : fileName[1] === "member"
         ? "MEMBER"
         : "찾아오시는 방법";
 

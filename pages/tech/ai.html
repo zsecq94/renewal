@@ -1,0 +1,227 @@
+<script>
+  $(document).ready(() => {
+    console.log("tech 마운트");
+  });
+</script>
+
+<div class="ai-con">
+  <span class="title">AI 빅데이터 센터</span>
+
+  <div class="sub-box">
+    <span class="sub"
+      >기존 전력망에 IT 기술이 더하여진 스마트그리드와재생에너지 발전원을 중심으로 형성되고 있는 마이크로그리드
+      전력체계,그리고 한 걸음 더 나아가 발전설비와 전력수요를 IT 로 통합관리하는 가상발전소 (VPP) 는에너지 영역에서는
+      가장 중요한 키워드로 자라잡고 있습니다.</span
+    >
+    <div class="line"></div>
+    <span class="sub"
+      >이러한 그리드를 스마트하게 만드는 핵심은 그리드 상에 분산 존재하는 다양한 기기들을모니터링 제어하면서 전력의 생산
+      및 소비를 예측하고 최적화된 의사결정을 가능하게 하는 데에 있습니다.</span
+    >
+  </div>
+  <div class="img-box1">
+    <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/ai_01.png" alt="" />
+    <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/ai_02.png" alt="" />
+  </div>
+
+  <div class="title-box">
+    <span class="title thin">AI 빅데이터센터에서는 그리드를 스마트하게 만드는 기술로서</span>
+    <span class="title">다음과 같이 세 가지 방향으로 연구개발하고 있습니다.</span>
+  </div>
+
+  <div class="img-box2">
+    <div class="box">
+      <div class="text-box">
+        <span>AI 기반의</span>
+        <span class="bold">이상징후탐지</span>
+      </div>
+      <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/ai_03_02.png" alt="" />
+    </div>
+    <div class="box">
+      <div class="text-box">
+        <span>AI 강화학습기반의</span>
+        <span class="bold">에너지 예측</span>
+      </div>
+      <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/ai_04_02.png" alt="" />
+    </div>
+    <div class="box">
+      <div class="text-box">
+        <span>에너지 AI 서비스 개발을 위한</span>
+        <span class="bold">Energy AIPlatform-as-a-Service</span>
+      </div>
+      <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/ai_05_02.png" alt="" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .ai-con {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ai-con .title {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .ai-con .thin {
+    font-weight: 300;
+  }
+
+  .ai-con > .title-box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-con > .sub-box {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+  .ai-con > .sub-box > .sub {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 180%;
+    width: 50%;
+  }
+
+  .ai-con > .sub-box > .line {
+    width: 1px;
+    height: auto;
+    background-color: #eee;
+  }
+
+  .ai-con > .img-box1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .ai-con > .img-box2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .ai-con > .img-box2 > .box {
+    padding: 40px;
+    height: 360px;
+    background: url("https://zsecq94.github.io/renewal/assets/images/content/tech/ai_03_01.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+  }
+
+  .ai-con > .img-box2 > .box:nth-child(2) {
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/content/tech/ai_04_01.png");
+  }
+
+  .ai-con > .img-box2 > .box:nth-child(3) {
+    background-image: url("https://zsecq94.github.io/renewal/assets/images/content/tech/ai_05_01.png");
+  }
+
+  .ai-con > .img-box2 > .box > .text-box {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  .ai-con > .img-box2 > .box > .text-box > span {
+    font-size: 26px;
+    font-weight: 500;
+    word-break: keep-all;
+  }
+
+  .ai-con > .img-box2 > .box > .text-box > .bold {
+    font-weight: 700;
+  }
+
+  .ai-con > .img-box2 > .box > img {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-con {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ai-con .title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .ai-con .thin {
+      font-weight: 300;
+    }
+
+    .ai-con > .title-box {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ai-con > .sub-box {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ai-con > .sub-box > .sub {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 160%;
+      width: 100%;
+    }
+
+    .ai-con > .sub-box > .line {
+      display: none;
+    }
+
+    .ai-con > .img-box1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-con > .img-box1 > img {
+      width: 100%;
+    }
+
+    .ai-con > .img-box1 > img:nth-child(2) {
+      display: none;
+    }
+
+    .ai-con > .img-box2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+
+    .ai-con > .img-box2 > .box {
+      padding: 20px;
+    }
+
+    .ai-con > .img-box2 > .box:nth-child(2) {
+      background-image: url("https://zsecq94.github.io/renewal/assets/images/content/tech/ai_04_01.png");
+    }
+
+    .ai-con > .img-box2 > .box:nth-child(3) {
+      background-image: url("https://zsecq94.github.io/renewal/assets/images/content/tech/ai_05_01.png");
+    }
+
+    .ai-con > .img-box2 > .box > .text-box > span {
+      font-size: 20px;
+    }
+
+    .ai-con > .img-box2 > .box > img {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+</style>

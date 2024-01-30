@@ -1,1 +1,164 @@
-<div><h2>tech페이지</h2></div>
+<script>
+  $(document).ready(() => {
+    let fileName = "";
+    const router = () => {
+      let route = window.location.hash.substr(2);
+
+      fileName = route.split("/");
+      if (fileName[0] === "tech") {
+        let selector = "#tech-content";
+        let filePath = "pages/tech/";
+
+        $.get(filePath + fileName[1] + ".html", (data) => {
+          $(selector).html(data);
+        });
+      }
+    };
+
+    $(window).on("hashchange", router);
+    router();
+
+    const $categoryTitle = $(".tech > .text-box > .category-box > .title");
+    const $textTitlt = $(".tech > .text-box > .title");
+    const $textSub = $(".tech > .text-box > .sub");
+    const name =
+      fileName[1] === "ai"
+        ? "AI 빅데이터 센터"
+        : fileName[1] === "patent"
+        ? "기술 특허 현황"
+        : fileName[1] === "performance"
+        ? "기업부설연구소 R&D실적"
+        : "시험성적";
+
+    $categoryTitle.html(name);
+    $textTitlt.html(name);
+    $textSub.html("시장 선점 및 신기술 적용을 통한 에너지 산업 초 강소기업! 렉스이노베이션입니다.");
+    // $textSub.html(name + " 페이지 " + "시장 선점 및 신기술 적용을 통한 에너지 산업 초 강소기업! 렉스이노베이션입니다.");
+  });
+</script>
+
+<div class="tech">
+  <div class="text-box">
+    <div class="category-box">
+      <img class="home" src="https://zsecq94.github.io/renewal/assets/images/icon/home_icon.png" alt="" />
+      <img class="next" src="https://zsecq94.github.io/renewal/assets/images/icon/nextgray_icon.png" alt="" />
+      <span>뵤유기술</span>
+      <img class="next" src="https://zsecq94.github.io/renewal/assets/images/icon/nextgray_icon.png" alt="" />
+      <span class="title"></span>
+    </div>
+    <div class="title"></div>
+    <div class="sub"></div>
+  </div>
+</div>
+<div id="tech-content"></div>
+
+<style>
+  .tech {
+    background-image: url("../assets/images/bg/bg_tech.png");
+    background-position: center;
+    background-size: cover;
+    padding: 250px 0px;
+    width: 100%;
+    min-width: 1280px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tech > .text-box {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    color: #fff;
+  }
+
+  .tech > .text-box > .category-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .tech > .text-box > .category-box > .home {
+    height: 18px;
+  }
+
+  .tech > .text-box > .category-box > .next {
+    height: 12px;
+  }
+
+  .tech > .text-box > .category-box > span {
+    font-size: 18px;
+    opacity: 0.5;
+    font-weight: 400;
+  }
+
+  .tech > .text-box > .category-box > .title {
+    opacity: 1;
+    font-weight: 600;
+  }
+
+  .tech > .text-box > .title {
+    font-size: 82px;
+    font-weight: 700;
+  }
+
+  .tech > .text-box > .sub {
+    font-size: 24px;
+    font-weight: 600;
+    width: 50%;
+    line-height: 140%;
+  }
+
+  #tech-content {
+    width: 100%;
+    padding: 150px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .tech {
+      padding: 120px 0px;
+      min-width: 100%;
+    }
+
+    .tech > .text-box {
+      margin-top: 50px;
+      width: 100%;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .tech > .text-box > .category-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tech > .text-box > .category-box > .home {
+      height: 12px;
+    }
+
+    .tech > .text-box > .category-box > .next {
+      height: 10px;
+    }
+
+    .tech > .text-box > .category-box > span {
+      font-size: 14px;
+    }
+
+    .tech > .text-box > .title {
+      font-size: 40px;
+    }
+
+    .tech > .text-box > .sub {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #tech-content {
+      padding: 50px 24px;
+    }
+  }
+</style>
