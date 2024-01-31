@@ -1,19 +1,244 @@
 <script>
-  $(document).ready(() => {});
+  $(document).ready(() => {
+    const datas = [
+      {
+        title: "스마트 배전 운영시스템의 보호기기 자동정정 장치 및 방법",
+        pn: "13-15922412",
+      },
+      {
+        title: "유비쿼터스 기반의 발전설비의 관리 시스템 및 방법",
+        pn: "08-123491923",
+      },
+      {
+        title: "DC용 무정전 충전 전원장치의 다중화를 위한 병렬 운전반",
+        pn: "10-1132241",
+      },
+      {
+        title: "발전용 터빈의 저속, 고속 및 과속도 시험장치",
+        pn: "123-test",
+      },
+      {
+        title: "계통주파수동기 탈조없이 유입유량 변동에 대응하여 소수력 발전기의 토오크를 제어하는 방법",
+        pn: "라면",
+      },
+    ];
+
+    const $span = $(".patent-con > .select-box > .text-box > span");
+    const $mainImg = $(".patent-con > .img-box > img");
+    const $title = $(".patent-con > .text-box > .title-box > .title");
+    const $sub = $(".patent-con > .text-box > .sub-box > .title");
+
+    let index = 0;
+    let $imgStyle = $(".patent-con > .select-box > .text-box").eq(0).find("img");
+    let $spanStyle = $(".patent-con > .select-box > .text-box").eq(0).find("span");
+
+    const updateStyle = () => {
+      $title.html(datas[index].title);
+      $sub.html(datas[index].pn);
+
+      $spanStyle.css({
+        color: "#F26933",
+        fontWeight: 700,
+      });
+      $imgStyle.attr("src", "assets/images/icon/ico_expansion02.png");
+      $mainImg.attr("src", `assets/images/content/tech/patent_0${index + 1}.png`);
+      // $mainImg.attr("src", `/assets/images/content/tech/patent_0${index}.png`);
+    };
+
+    const removeStyle = () => {
+      if ($imgStyle) {
+        $imgStyle.attr("src", "assets/images/icon/ico_expansion01.png");
+        $spanStyle.css({
+          color: "black",
+          fontWeight: 400,
+        });
+      }
+    };
+
+    $span.click(function () {
+      removeStyle();
+      index = $(this).parent().index();
+      $imgStyle = $(this).next();
+      $spanStyle = $(this);
+      updateStyle();
+    });
+
+    updateStyle();
+  });
 </script>
 
 <div class="patent-con">
   <div class="text-box">
     <div class="title-box">
       <span class="sub">Title of the Invention</span>
-      <span class="title">스마트 배전 운영시스템의 보호기기 자동정정 장치 및 방법</span>
+      <span class="title"></span>
     </div>
     <div class="sub-box">
       <span class="sub">Patent Number</span>
-      <span class="title">10-0857610</span>
+      <span class="title"></span>
     </div>
   </div>
   <div class="img-box">
-    <img src="https://zsecq94.github.io/renewal/assets/images/content/tech/patent_01.png" alt="" />
+    <img src="/assets/images/content/tech/patent_01.png" alt="" />
+  </div>
+  <div class="select-box">
+    <div class="text-box">
+      <span>스마트 배전 운영시스템의 보호기기 자동정정 장치 및 방법</span>
+      <img src="./assets/images/icon/ico_expansion01.png" alt="" />
+    </div>
+    <div class="text-box">
+      <span>유비쿼터스 기반의 발전설비의 관리 시스템 및 방법</span>
+      <img src="./assets/images/icon/ico_expansion01.png" alt="" />
+    </div>
+    <div class="text-box">
+      <span>DC용 무정전 충전 전원장치의 다중화를 위한 병렬 운전반</span>
+      <img src="./assets/images/icon/ico_expansion01.png" alt="" />
+    </div>
+    <div class="text-box">
+      <span>발전용 터빈의 저속, 고속 및 과속도 시험장치</span>
+      <img src="./assets/images/icon/ico_expansion01.png" alt="" />
+    </div>
+    <div class="text-box">
+      <span>계통주파수동기 탈조없이 유입유량 변동에 대응하여 소수력 발전기의 토오크를 제어하는 방법</span>
+      <img src="./assets/images/icon/ico_expansion01.png" alt="" />
+    </div>
   </div>
 </div>
+
+<style>
+  .patent-con {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    position: relative;
+  }
+
+  .patent-con > .text-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    left: 50%;
+    width: 50%;
+  }
+
+  .patent-con > .text-box > .title-box,
+  .patent-con > .text-box > .sub-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .patent-con > .text-box .sub {
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+  }
+
+  .patent-con > .text-box > .title-box > .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .patent-con > .text-box > .sub-box > .title {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .patent-con > .img-box {
+    width: 40%;
+    padding: 10px;
+    background-color: #fbfbfb;
+  }
+
+  .patent-con > .img-box > img {
+    width: 100%;
+  }
+
+  .patent-con > .select-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    padding: 20px 0px;
+    border-top: solid 2px black;
+  }
+
+  .patent-con > .select-box > .text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #eee;
+  }
+
+  .patent-con > .select-box > .text-box > span {
+    font-size: 18px;
+    font-weight: 400;
+    width: 90%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .patent-con {
+      width: 100%;
+      gap: 24px;
+    }
+
+    .patent-con > .text-box {
+      position: static;
+      width: 100%;
+      gap: 24px;
+    }
+
+    .patent-con > .text-box > .title-box > .title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 140%;
+      color: #111;
+    }
+
+    .patent-con > .text-box > .sub-box > .title {
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    .patent-con > .img-box {
+      width: 100%;
+    }
+
+    .patent-con > .select-box {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      left: 50%;
+      top: 50%;
+      padding: 20px 0px;
+      border-top: solid 2px black;
+
+      width: 100%;
+    }
+
+    .patent-con > .select-box > .text-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 10px;
+      padding-bottom: 20px;
+      border-bottom: solid 1px #eee;
+    }
+
+    .patent-con > .select-box > .text-box > span {
+      font-size: 18px;
+      font-weight: 400;
+      width: 85%;
+      cursor: pointer;
+    }
+  }
+</style>
