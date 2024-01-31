@@ -1,0 +1,85 @@
+.per-con {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.per-con > .title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.per-con > .title-box > .title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.per-con > .year-box {
+  display: flex;
+  gap: 10px;
+}
+
+.per-con > .year-box > .year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+  border-radius: 25px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.per-con > .content-box {
+  margin-top: 30px;
+  display: flex;
+  gap: 60px;
+}
+
+.per-con > .content-box > .title {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.per-con > .content-box > .con {
+  padding: 0 30px;
+  border-left: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.per-con > .content-box > .con > .box {
+  display: flex;
+}
+
+.per-con > .content-box > .con > .box > .title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f26933;
+  width: 10%;
+}
+.per-con > .content-box > .con > .box > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.per-con > .content-box > .con > .box > ul > li {
+  font-size: 18px;
+  font-weight: 400;
+  list-style: square;
+}
+
+.per-con > .content-box > .con > .box > ul > li::marker {
+  color: #a5a5a5;
+}
+
+.per-con > .content-box > .con > .box > ul > .bronze {
+  color: #9a7b65;
+}
